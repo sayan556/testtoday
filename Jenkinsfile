@@ -20,9 +20,9 @@ agent any
            withCredentials([usernamePassword(credentialsId: 'sayanID', passwordVariable: 'password', usernameVariable: 'username')]) {
     // some block
 
-               remote.user = username
-               remote.password = password
-               sshPut remote : remote, from: "index.html" , into: "/home/sayan"
+               remote.user = "$username"
+               remote.password = "$password"
+               sshPut remote : remote, from: "index.html" , into: "/home/sayan/a"
             }
           }
         }
