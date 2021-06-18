@@ -22,7 +22,7 @@ agent any
 
                remote.user = username
                remote.password = password
-               sshPut remote : remote, from: "index.html" , into: "/var/www/html"
+               sshPut remote : remote, from: "index.html" , into: "/home/sayan"
             }
           }
         }
