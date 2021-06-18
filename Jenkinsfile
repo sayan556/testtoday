@@ -1,6 +1,6 @@
 def remote = [:]
 remote.name = 'test'
-remote.host = '192.168.1.105'
+remote.host = '54.177.240.166'
 remote.port = 22
 remote.allowAnyHosts = true
 
@@ -11,13 +11,13 @@ agent any
    stages {
      stage('git clone') {
        steps {
-           git branch: 'main', credentialsId: 'githubcred', url: 'https://github.com/sayan556/ec2test.git'
+           git branch: 'main', credentialsId: 'githubcred', url: 'https://github.com/sayan556/testtoday.git'
          }
        }
      stage('deployment') {
        steps {
           script {
-           withCredentials([usernamePassword(credentialsId: 'sshcredential', passwordVariable: 'password', usernameVariable: 'username')]) {
+           withCredentials([usernamePassword(credentialsId: 'sayanID', passwordVariable: 'password', usernameVariable: 'username')]) {
     // some block
 
                remote.user = username
