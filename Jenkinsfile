@@ -22,7 +22,7 @@ agent any
 
                remote.user = "$username"
                remote.password = "$password"
-               sshPut remote : remote, from: "deployment.yaml" , into: "/home/sayan/a"
+               sshPut remote : remote, from: "deployment.yaml" , into: "/home/sayan"
                sshCommand remote: remote, command: "kubectl apply -f deployment.yaml"
 
             }
